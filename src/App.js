@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, {useState } from 'react';
 import './App.css';
 
-class App extends Component {
-  render() {
+function App () {
+  const [count,setCounter] = useState(0);
     return (
       <div>
-        <span className="value">0</span>
-        <button id="inc">Incrementa</button>
+        <span className="value">{count}</span>
+        <button id="inc" onClick = {() => setCounter(count+1) } >Incrementa</button>
       </div>
     );
-  }
 }
 
 export default App;
